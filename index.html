@@ -42,6 +42,7 @@ body {
   font-weight: normal;
 }
 
+/* FRONT FOOTER (unchanged) */
 .footer {
   position:absolute;
   left:0; right:0; bottom:0;
@@ -50,6 +51,13 @@ body {
   text-align:center;
   font-size: .09in;
   font-weight:bold;
+}
+
+/* BACK FOOTER (thinner) */
+.footer.back-footer {
+  padding: 0.04in;
+  font-size: .075in;
+  font-weight: normal;
 }
 
 /* FRONT */
@@ -113,7 +121,8 @@ body {
 
 /* SIGNATURE AREA */
 .signatures {
-  margin-top: 0.18in;
+  margin-top: 0.22in;
+  margin-bottom: 0.12in; /* footer থেকে একটু উপরে রাখার জন্য */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -130,9 +139,10 @@ body {
   max-height: 0.35in;
 }
 
+/* Signature name আরও নিচে */
 .signature-label {
-  margin-top: 3px;
-  font-size: .085in;
+  margin-top: 10px;
+  font-size: .08in;
   font-weight: bold;
 }
 
@@ -189,20 +199,19 @@ body {
     <div class="back-pair"><div class="back-label">Fax:</div><div class="back-value">+679 6671581</div></div>
     <div class="back-pair"><div class="back-label">Employee Phone:</div><div class="back-value">+679 7952664</div></div>
 
-    <!-- SIGNATURES -->
     <div class="signatures">
       <div class="signature-box">
-        <img src="manager-sign.png" alt="Managing Signature">
+        <img src="manager-sign.png">
         <div class="signature-label">Managing Signature</div>
       </div>
       <div class="signature-box">
-        <img src="operator-sign.png" alt="Operator Signature">
+        <img src="operator-sign.png">
         <div class="signature-label">Operator Signature</div>
       </div>
     </div>
   </div>
 
-  <div class="footer">ajharulislam106@gmail.com</div>
+  <div class="footer back-footer">ajharulislam106@gmail.com</div>
 </div>
 
 <div class="controls">
