@@ -42,7 +42,7 @@ body {
   font-weight: normal;
 }
 
-/* FRONT FOOTER */
+/* FOOTER */
 .footer {
   position:absolute;
   left:0; right:0; bottom:0;
@@ -53,7 +53,6 @@ body {
   font-weight:bold;
 }
 
-/* BACK FOOTER (পাতলা) */
 .footer.back-footer {
   padding: 0.04in;
   font-size: .075in;
@@ -106,10 +105,6 @@ body {
 /* BACK */
 .back-body {
   height: calc(85.6mm - 1.1in);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 0.14in;
   text-align: center;
   font-size: .1in;
@@ -119,11 +114,12 @@ body {
 .back-label { font-weight: bold; font-size: .09in; }
 .back-value { font-size: .1in; margin-top: 2px; }
 
-/* SIGNATURE AREA */
+/* SIGNATURES – EXACT POSITION LIKE IMAGE */
 .signatures {
-  margin-top: 0.22in;
-  margin-bottom: 0.14in; /* footer থেকে হালকা উপরে */
-  width: 100%;
+  position: absolute;
+  left: 0.14in;
+  right: 0.14in;
+  bottom: 0.32in; /* 🔴 ছবির লাল চিহ্নের জায়গা */
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -136,11 +132,11 @@ body {
 
 .signature-box img {
   max-width: 100%;
-  max-height: 0.35in;
+  max-height: 0.30in;
 }
 
 .signature-label {
-  margin-top: 8px;
+  margin-top: 6px;
   font-size: .08in;
   font-weight: bold;
 }
@@ -197,16 +193,17 @@ body {
     <div class="back-pair"><div class="back-label">Phone:</div><div class="back-value">+679 9995543</div></div>
     <div class="back-pair"><div class="back-label">Fax:</div><div class="back-value">+679 6671581</div></div>
     <div class="back-pair"><div class="back-label">Employee Phone:</div><div class="back-value">+679 7952664</div></div>
+  </div>
 
-    <div class="signatures">
-      <div class="signature-box">
-        <img src="manager-sign.png">
-        <div class="signature-label">Managing Signature</div>
-      </div>
-      <div class="signature-box">
-        <img src="operator-sign.png">
-        <div class="signature-label">Operator Signature</div>
-      </div>
+  <!-- SIGNATURES -->
+  <div class="signatures">
+    <div class="signature-box">
+      <img src="manager-sign.png">
+      <div class="signature-label">Managing Signature</div>
+    </div>
+    <div class="signature-box">
+      <img src="operator-sign.png">
+      <div class="signature-label">Operator Signature</div>
     </div>
   </div>
 
