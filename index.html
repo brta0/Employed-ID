@@ -111,12 +111,29 @@ body {
 .back-label { font-weight: bold; font-size: .09in; }
 .back-value { font-size: .1in; margin-top: 2px; }
 
-.back-barcode {
+/* SIGNATURE AREA */
+.signatures {
   margin-top: 0.18in;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
-.back-barcode img {
-  max-width: 1.2in;
+
+.signature-box {
+  width: 48%;
+  text-align: center;
+}
+
+.signature-box img {
+  max-width: 100%;
   max-height: 0.35in;
+}
+
+.signature-label {
+  margin-top: 3px;
+  font-size: .085in;
+  font-weight: bold;
 }
 
 @page { size: 54mm 85.6mm; margin: 0; }
@@ -172,8 +189,16 @@ body {
     <div class="back-pair"><div class="back-label">Fax:</div><div class="back-value">+679 6671581</div></div>
     <div class="back-pair"><div class="back-label">Employee Phone:</div><div class="back-value">+679 7952664</div></div>
 
-    <div class="back-barcode">
-      <img src="barcode.png">
+    <!-- SIGNATURES -->
+    <div class="signatures">
+      <div class="signature-box">
+        <img src="manager-sign.png" alt="Managing Signature">
+        <div class="signature-label">Managing Signature</div>
+      </div>
+      <div class="signature-box">
+        <img src="operator-sign.png" alt="Operator Signature">
+        <div class="signature-label">Operator Signature</div>
+      </div>
     </div>
   </div>
 
