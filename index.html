@@ -153,35 +153,53 @@ body {
   padding: 0.14in;
   text-align: center;
   font-size: .1in;
+  position: relative;
+  z-index: 2;
 }
 
+/* ✅ WATERMARK */
+.watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.watermark img {
+  max-width: 70%;
+  opacity: 0.08; /* জলছাপ হালকা */
+}
+
+/* BACK TEXT STYLE */
 .back-pair {
   margin-bottom: 0.06in;
 }
 
 .back-label {
-  font-weight: bold;
-  font-size: .09in;
+  font-size: .085in;
+  font-weight: normal; /* পাতলা */
 }
 
 .back-value {
   font-size: .1in;
+  font-weight: bold;   /* মোটা */
   margin-top: 2px;
 }
 
-/* ✅ SIGNATURES – FINAL PERFECT POSITION */
+/* SIGNATURES */
 .signatures {
   position: absolute;
   left: 0.14in;
   right: 0.14in;
-
-  /* 🔴 footer height + spacing ধরে */
   bottom: 0.42in;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 10px;
+  z-index: 3;
 }
 
 .signature-box {
@@ -192,7 +210,7 @@ body {
 .signature-box img {
   max-width: 100%;
   max-height: 0.30in;
-  margin-bottom: -4px; /* 🔴 PNG নিচে নামানো */
+  margin-bottom: -4px;
 }
 
 .signature-label {
@@ -201,7 +219,7 @@ body {
   font-weight: bold;
 }
 
-/* PRINT – A4 CENTER */
+/* PRINT */
 @page {
   size: A4;
   margin: 20mm;
@@ -216,9 +234,7 @@ body {
     align-items: center;
     gap: 20mm;
   }
-  .controls {
-    display: none;
-  }
+  .controls { display: none; }
 }
 </style>
 </head>
@@ -235,7 +251,6 @@ body {
         <div class="photo"><img src="photo.jpg"></div>
         <div class="barcode"><img src="barcode.png"></div>
       </div>
-
       <div>
         <div class="pair"><div class="label">Name:</div><div class="value">AJHARUL ISLAM</div></div>
         <div class="pair"><div class="label">Position:</div><div class="value">Excavator Operator</div></div>
@@ -262,6 +277,11 @@ body {
 <div class="card">
   <div class="header thin">IF FOUND, PLEASE RETURN THIS CARD TO THE OFFICE</div>
 
+  <!-- WATERMARK -->
+  <div class="watermark">
+    <img src="watermark.png">
+  </div>
+
   <div class="back-body">
     <div class="back-pair"><div class="back-label">Address:</div><div class="back-value">Kings Road, Yalalevu, BA</div></div>
     <div class="back-pair"><div class="back-label">P.O. Box:</div><div class="back-value">3937</div></div>
@@ -270,7 +290,6 @@ body {
     <div class="back-pair"><div class="back-label">Employee Phone:</div><div class="back-value">+679 7952664</div></div>
   </div>
 
-  <!-- SIGNATURES -->
   <div class="signatures">
     <div class="signature-box">
       <img src="manager-sign.png">
