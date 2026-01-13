@@ -6,7 +6,11 @@
 <title>EMPLOYEE ID CARD</title>
 
 <style>
-* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
 
 body {
   margin: 0;
@@ -31,6 +35,7 @@ body {
   border-right: 0.8mm solid #89c5ff;
 }
 
+/* HEADER */
 .header {
   background: #bff0df;
   padding: 0.12in;
@@ -48,7 +53,9 @@ body {
 /* FOOTER */
 .footer {
   position:absolute;
-  left:0; right:0; bottom:0;
+  left:0;
+  right:0;
+  bottom:0;
   background:#bff0df;
   padding: 0.07in;
   text-align:center;
@@ -63,7 +70,9 @@ body {
 }
 
 /* FRONT */
-.body { padding: 0.10in 0.14in 0.12in; }
+.body {
+  padding: 0.10in 0.14in 0.12in;
+}
 
 .grid {
   display:grid;
@@ -73,18 +82,39 @@ body {
 
 .photo {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 3 / 4;
   background: #EAEAEA;
   padding: 6px 3px;
 }
-.photo img { width:100%; height:100%; object-fit:cover; }
 
-.barcode { margin-top: 0.04in; }
-.barcode img { max-width: 1.0in; max-height: 0.3in; }
+.photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-.label { font-size: .08in; color:#555; }
-.value { font-size: .11in; font-weight: bold; }
-.pair { margin: .035in 0; }
+.barcode {
+  margin-top: 0.04in;
+}
+
+.barcode img {
+  max-width: 1.0in;
+  max-height: 0.3in;
+}
+
+.label {
+  font-size: .08in;
+  color:#555;
+}
+
+.value {
+  font-size: .11in;
+  font-weight: bold;
+}
+
+.pair {
+  margin: .035in 0;
+}
 
 .bottom {
   margin-top: 0.08in;
@@ -93,9 +123,19 @@ body {
   align-items: center;
 }
 
-.company { text-align:center; width: 1.0in; }
-.company img { max-width: 0.6in; }
-.company .name { font-size: .095in; font-weight: bold; }
+.company {
+  text-align:center;
+  width: 1.0in;
+}
+
+.company img {
+  max-width: 0.6in;
+}
+
+.company .name {
+  font-size: .095in;
+  font-weight: bold;
+}
 
 .divider {
   width: 1px;
@@ -103,28 +143,44 @@ body {
   height: 0.75in;
 }
 
-.qr img { max-width: 0.65in; }
+.qr img {
+  max-width: 0.65in;
+}
 
 /* BACK */
 .back-body {
-  height: calc(85.6mm - 1.1in);
+  height: calc(85.6mm - 1.25in);
   padding: 0.14in;
   text-align: center;
   font-size: .1in;
 }
 
-.back-pair { margin-bottom: 0.06in; }
-.back-label { font-weight: bold; font-size: .09in; }
-.back-value { font-size: .1in; margin-top: 2px; }
+.back-pair {
+  margin-bottom: 0.06in;
+}
 
-/* SIGNATURES – নিচে নামানো হয়েছে */
+.back-label {
+  font-weight: bold;
+  font-size: .09in;
+}
+
+.back-value {
+  font-size: .1in;
+  margin-top: 2px;
+}
+
+/* ✅ SIGNATURES – FINAL PERFECT POSITION */
 .signatures {
   position: absolute;
   left: 0.14in;
   right: 0.14in;
-  bottom: 0.22in; /* 🔴 আরও নিচে, লাল দাগের জায়গা */
+
+  /* 🔴 footer height + spacing ধরে */
+  bottom: 0.42in;
+
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   gap: 10px;
 }
 
@@ -135,11 +191,12 @@ body {
 
 .signature-box img {
   max-width: 100%;
-  max-height: 0.28in;
+  max-height: 0.30in;
+  margin-bottom: -4px; /* 🔴 PNG নিচে নামানো */
 }
 
 .signature-label {
-  margin-top: 6px;
+  margin-top: 4px;
   font-size: .08in;
   font-weight: bold;
 }
@@ -153,13 +210,15 @@ body {
 @media print {
   body {
     background: transparent;
-    padding:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20mm;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20mm;
   }
-  .controls { display:none; }
+  .controls {
+    display: none;
+  }
 }
 </style>
 </head>
@@ -169,12 +228,14 @@ body {
 <!-- FRONT CARD -->
 <div class="card">
   <div class="header">EMPLOYEE ID CARD</div>
+
   <div class="body">
     <div class="grid">
       <div>
         <div class="photo"><img src="photo.jpg"></div>
         <div class="barcode"><img src="barcode.png"></div>
       </div>
+
       <div>
         <div class="pair"><div class="label">Name:</div><div class="value">AJHARUL ISLAM</div></div>
         <div class="pair"><div class="label">Position:</div><div class="value">Excavator Operator</div></div>
@@ -193,6 +254,7 @@ body {
       <div class="qr"><img src="qrcode.png"></div>
     </div>
   </div>
+
   <div class="footer">www.4r-ltd.com</div>
 </div>
 
@@ -208,6 +270,7 @@ body {
     <div class="back-pair"><div class="back-label">Employee Phone:</div><div class="back-value">+679 7952664</div></div>
   </div>
 
+  <!-- SIGNATURES -->
   <div class="signatures">
     <div class="signature-box">
       <img src="manager-sign.png">
