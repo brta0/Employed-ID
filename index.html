@@ -31,13 +31,14 @@ body {
   background: #ffffff;
   position: relative;
   overflow: hidden;
-  border-left: 0.8mm solid #89c5ff;
-  border-right: 0.8mm solid #89c5ff;
+  border-left: 0.8mm solid #2f80ed;
+  border-right: 0.8mm solid #2f80ed;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .header {
-  background: #bff0df;
+  background: #2f80ed;        /* 🔵 FRONT HEADER */
+  color: #ffffff;
   padding: 0.12in;
   text-align: center;
   font-weight: bold;
@@ -45,18 +46,21 @@ body {
 }
 
 .header.thin {
+  background: #1b7f5f;        /* 🟢 BACK HEADER */
+  color: #ffffff;
   padding: 0.07in;
   font-size: .1in;
   font-weight: normal;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer {
   position:absolute;
   left:0;
   right:0;
   bottom:0;
-  background:#bff0df;
+  background:#2f80ed;        /* 🔵 FRONT FOOTER */
+  color:#ffffff;
   padding: 0.07in;
   text-align:center;
   font-size: .09in;
@@ -64,12 +68,14 @@ body {
 }
 
 .footer.back-footer {
+  background:#1b7f5f;        /* 🟢 BACK FOOTER */
+  color:#ffffff;
   padding: 0.04in;
   font-size: .075in;
   font-weight: normal;
 }
 
-/* FRONT */
+/* FRONT BODY */
 .body {
   padding: 0.10in 0.14in 0.12in;
 }
@@ -147,7 +153,7 @@ body {
   max-width: 0.65in;
 }
 
-/* BACK */
+/* BACK BODY */
 .back-body {
   height: calc(85.6mm - 1.25in);
   padding: 0.14in;
@@ -157,7 +163,7 @@ body {
   z-index: 2;
 }
 
-/* ✅ WATERMARK */
+/* WATERMARK */
 .watermark {
   position: absolute;
   inset: 0;
@@ -170,22 +176,21 @@ body {
 
 .watermark img {
   max-width: 70%;
-  opacity:  0.45; /* জলছাপ হালকা */
+  opacity: 0.12;
 }
 
-/* BACK TEXT STYLE */
+/* BACK TEXT */
 .back-pair {
   margin-bottom: 0.06in;
 }
 
 .back-label {
   font-size: .085in;
-  font-weight: normal; /* পাতলা */
 }
 
 .back-value {
   font-size: .1in;
-  font-weight: bold;   /* মোটা */
+  font-weight: bold;
   margin-top: 2px;
 }
 
@@ -241,7 +246,7 @@ body {
 
 <body>
 
-<!-- FRONT CARD -->
+<!-- FRONT -->
 <div class="card">
   <div class="header">EMPLOYEE ID CARD</div>
 
@@ -273,11 +278,10 @@ body {
   <div class="footer">www.4r-ltd.com</div>
 </div>
 
-<!-- BACK CARD -->
+<!-- BACK -->
 <div class="card">
   <div class="header thin">IF FOUND, PLEASE RETURN THIS CARD TO THE OFFICE</div>
 
-  <!-- WATERMARK -->
   <div class="watermark">
     <img src="watermark.png">
   </div>
