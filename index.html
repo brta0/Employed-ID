@@ -47,10 +47,8 @@ body {
 
 .header.thin {
   background: #2c2c2c;
-  color: #ffffff;
   padding: 0.07in;
   font-size: .1in;
-  font-weight: normal;
 }
 
 /* FOOTER */
@@ -69,10 +67,8 @@ body {
 
 .footer.back-footer {
   background:#2c2c2c;
-  color:#ffffff;
   padding: 0.04in;
   font-size: .075in;
-  font-weight: normal;
 }
 
 /* FRONT BODY */
@@ -143,10 +139,10 @@ body {
   font-weight: bold;
 }
 
-/* 🔴 DIVIDER COLOR CHANGED HERE */
+/* 🔴 CHANGED DIVIDER COLOR HERE */
 .divider {
   width: 1px;
-  background: #7b1e1e; /* theme matching maroon */
+  background: #7b1e1e; /* আগে ছিল #ccc */
   height: 0.75in;
 }
 
@@ -180,21 +176,6 @@ body {
   opacity: 0.12;
 }
 
-/* BACK TEXT */
-.back-pair {
-  margin-bottom: 0.06in;
-}
-
-.back-label {
-  font-size: .085in;
-}
-
-.back-value {
-  font-size: .1in;
-  font-weight: bold;
-  margin-top: 2px;
-}
-
 /* SIGNATURES */
 .signatures {
   position: absolute;
@@ -225,10 +206,17 @@ body {
   font-weight: bold;
 }
 
-/* PRINT */
 @page {
   size: A4;
   margin: 20mm;
+}
+
+@media print {
+  body {
+    background: transparent;
+    padding: 0;
+  }
+  .controls { display: none; }
 }
 </style>
 </head>
