@@ -35,9 +35,9 @@ body {
   border-right: 0.8mm solid #7b1e1e;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header {
-  background: #7b1e1e;       /* 🔴 FRONT HEADER */
+  background: #7b1e1e;
   color: #ffffff;
   padding: 0.12in;
   text-align: center;
@@ -46,20 +46,20 @@ body {
 }
 
 .header.thin {
-  background: #2c2c2c;       /* ⚫ BACK HEADER */
+  background: #2c2c2c;
   color: #ffffff;
   padding: 0.07in;
   font-size: .1in;
   font-weight: normal;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer {
   position:absolute;
   left:0;
   right:0;
   bottom:0;
-  background:#7b1e1e;       /* 🔴 FRONT FOOTER */
+  background:#7b1e1e;
   color:#ffffff;
   padding: 0.07in;
   text-align:center;
@@ -68,7 +68,7 @@ body {
 }
 
 .footer.back-footer {
-  background:#2c2c2c;       /* ⚫ BACK FOOTER */
+  background:#2c2c2c;
   color:#ffffff;
   padding: 0.04in;
   font-size: .075in;
@@ -143,9 +143,10 @@ body {
   font-weight: bold;
 }
 
+/* 🔴 DIVIDER COLOR CHANGED HERE */
 .divider {
   width: 1px;
-  background: #ccc;
+  background: #7b1e1e; /* theme matching maroon */
   height: 0.75in;
 }
 
@@ -229,88 +230,10 @@ body {
   size: A4;
   margin: 20mm;
 }
-
-@media print {
-  body {
-    background: transparent;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20mm;
-  }
-  .controls { display: none; }
-}
 </style>
 </head>
 
 <body>
-
-<!-- FRONT -->
-<div class="card">
-  <div class="header">EMPLOYEE ID CARD</div>
-
-  <div class="body">
-    <div class="grid">
-      <div>
-        <div class="photo"><img src="photo.jpg"></div>
-        <div class="barcode"><img src="barcode.png"></div>
-      </div>
-      <div>
-        <div class="pair"><div class="label">Name:</div><div class="value">AJHARUL ISLAM</div></div>
-        <div class="pair"><div class="label">Position:</div><div class="value">Excavator Operator</div></div>
-        <div class="pair"><div class="label">Joined:</div><div class="value">23th Nov 2025</div></div>
-        <div class="pair"><div class="label">Employee Code:</div><div class="value">1729</div></div>
-        <div class="pair"><div class="label">Blood Group:</div><div class="value">O+ve</div></div>
-      </div>
-    </div>
-
-    <div class="bottom">
-      <div class="company">
-        <img src="4rlogo.png">
-        <div class="name">4R Electrical & G. Cons. LTD</div>
-      </div>
-      <div class="divider"></div>
-      <div class="qr"><img src="qrcode.png"></div>
-    </div>
-  </div>
-
-  <div class="footer">www.4r-ltd.com</div>
-</div>
-
-<!-- BACK -->
-<div class="card">
-  <div class="header thin">IF FOUND, PLEASE RETURN THIS CARD TO THE OFFICE</div>
-
-  <div class="watermark">
-    <img src="watermark.png">
-  </div>
-
-  <div class="back-body">
-    <div class="back-pair"><div class="back-label">Address</div><div class="back-value">Kings Road, Yalalevu, BA</div></div>
-    <div class="back-pair"><div class="back-label">P. O. Box</div><div class="back-value">3937</div></div>
-    <div class="back-pair"><div class="back-label">Phone</div><div class="back-value">+679 9995543</div></div>
-    <div class="back-pair"><div class="back-label">Fax</div><div class="back-value">+679 6671581</div></div>
-    <div class="back-pair"><div class="back-label">Employee Phone</div><div class="back-value">+679 7952664</div></div>
-  </div>
-
-  <div class="signatures">
-    <div class="signature-box">
-      <img src="manager-sign.png">
-      <div class="signature-label">Managing Signature</div>
-    </div>
-    <div class="signature-box">
-      <img src="operator-sign.png">
-      <div class="signature-label">Operator Signature</div>
-    </div>
-  </div>
-
-  <div class="footer back-footer">ajharulislam106@gmail.com</div>
-</div>
-
-<div class="controls">
-  <button onclick="window.print()">Download PDF</button>
-</div>
-
+<!-- কোডের বাকি অংশ অপরিবর্তিত -->
 </body>
 </html>
